@@ -20,7 +20,7 @@ package free.rm.skytube.businessobjects.db.Tasks;
 import android.widget.Toast;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.db.SubscriptionsDb;
@@ -96,7 +96,7 @@ public class SubscribeToChannelTask extends AsyncTaskParallel<Void, Void, Boolea
 				Toast.makeText(subscribeButton.getContext(), R.string.unsubscribed, Toast.LENGTH_LONG).show();
 			}
 		} else {
-			String err = String.format(SkyTubeApp.getStr(R.string.error_unable_to_subscribe), channel.getId());
+			String err = String.format(AndTubeApp.getStr(R.string.error_unable_to_subscribe), channel.getId());
 			Toast.makeText(subscribeButton.getContext(), err, Toast.LENGTH_LONG).show();
 		}
 	}

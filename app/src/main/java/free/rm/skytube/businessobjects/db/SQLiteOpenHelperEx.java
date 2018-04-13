@@ -22,7 +22,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.io.File;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 
 /**
  * An extended {@link SQLiteOpenHelper} with extra goodies.
@@ -56,7 +56,7 @@ public abstract class SQLiteOpenHelperEx extends SQLiteOpenHelper {
 	 * @return The database (full) path.
 	 */
 	public String getDatabasePath() {
-		return SkyTubeApp.getContext().getDatabasePath(getDatabaseName()).getPath();
+		return AndTubeApp.getContext().getDatabasePath(getDatabaseName()).getPath();
 	}
 
 
@@ -64,7 +64,7 @@ public abstract class SQLiteOpenHelperEx extends SQLiteOpenHelper {
 	 * @return The database directory (as a {@link File}).
 	 */
 	public File getDatabaseDirectory() {
-		return SkyTubeApp.getContext().getDatabasePath(getDatabaseName()).getParentFile();
+		return AndTubeApp.getContext().getDatabasePath(getDatabaseName()).getParentFile();
 	}
 
 }

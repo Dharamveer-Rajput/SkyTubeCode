@@ -6,7 +6,7 @@ import android.view.View;
 
 import butterknife.BindView;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.VideoCategory;
 import free.rm.skytube.businessobjects.db.DownloadedVideosDb;
@@ -58,8 +58,8 @@ public class DownloadedVideosFragment extends OrderableVideosGridFragment implem
 	 */
 	private void displayDownloadsDisabledWarning() {
 		if (downloadsDisabledWarning != null) {
-			boolean allowDownloadsOnMobile = SkyTubeApp.getPreferenceManager().getBoolean(SkyTubeApp.getStr(R.string.pref_key_allow_mobile_downloads), false);
-			downloadsDisabledWarning.setVisibility(SkyTubeApp.isConnectedToMobile() && !allowDownloadsOnMobile ? View.VISIBLE : View.GONE);
+			boolean allowDownloadsOnMobile = AndTubeApp.getPreferenceManager().getBoolean(AndTubeApp.getStr(R.string.pref_key_allow_mobile_downloads), false);
+			downloadsDisabledWarning.setVisibility(AndTubeApp.isConnectedToMobile() && !allowDownloadsOnMobile ? View.VISIBLE : View.GONE);
 		}
 	}
 
@@ -77,7 +77,7 @@ public class DownloadedVideosFragment extends OrderableVideosGridFragment implem
 
 	@Override
 	public String getFragmentName() {
-		return SkyTubeApp.getStr(R.string.downloads);
+		return AndTubeApp.getStr(R.string.downloads);
 	}
 
 

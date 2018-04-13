@@ -66,19 +66,19 @@ import free.rm.skytube.gui.fragments.PlaylistVideosFragment;
 /**
  * SkyTube application.
  */
-public class SkyTubeApp extends MultiDexApplication {
+public class AndTubeApp extends MultiDexApplication {
 
 	/** SkyTube Application databaseInstance. */
-	private static SkyTubeApp skyTubeApp = null;
+	private static AndTubeApp andTubeApp = null;
 
-	public static final String KEY_SUBSCRIPTIONS_LAST_UPDATED = "SkyTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED";
-	public static final String NEW_VIDEOS_NOTIFICATION_CHANNEL = "free.rm.skytube.NEW_VIDEOS_NOTIFICATION_CHANNEL";
+	public static final String KEY_SUBSCRIPTIONS_LAST_UPDATED = "AndTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED";
+	public static final String NEW_VIDEOS_NOTIFICATION_CHANNEL = "free.dv.andtube.NEW_VIDEOS_NOTIFICATION_CHANNEL";
 	public static final int NEW_VIDEOS_NOTIFICATION_CHANNEL_ID = 1;
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		skyTubeApp = this;
+		andTubeApp = this;
 		initChannels(this);
 	}
 
@@ -90,7 +90,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * @return Localised string, from the strings XML file.
 	 */
 	public static String getStr(int stringResId) {
-		return skyTubeApp.getString(stringResId);
+		return andTubeApp.getString(stringResId);
 	}
 
 
@@ -101,7 +101,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * @return Array of String.
 	 */
 	public static String[] getStringArray(int stringArrayResId) {
-		return skyTubeApp.getResources().getStringArray(stringArrayResId);
+		return andTubeApp.getResources().getStringArray(stringArrayResId);
 	}
 
 
@@ -122,7 +122,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * @return {@link SharedPreferences}
 	 */
 	public static SharedPreferences getPreferenceManager() {
-		return PreferenceManager.getDefaultSharedPreferences(skyTubeApp);
+		return PreferenceManager.getDefaultSharedPreferences(andTubeApp);
 	}
 
 
@@ -133,7 +133,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * @return The dimension value.
 	 */
 	public static float getDimension(int dimensionId) {
-		return skyTubeApp.getResources().getDimension(dimensionId);
+		return andTubeApp.getResources().getDimension(dimensionId);
 	}
 
 
@@ -141,7 +141,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * @return {@link Context}.
 	 */
 	public static Context getContext() {
-		return skyTubeApp.getBaseContext();
+		return andTubeApp.getBaseContext();
 	}
 
 
@@ -213,7 +213,7 @@ public class SkyTubeApp extends MultiDexApplication {
 	 * Get the stored interval (in milliseconds) to pass to the below method.
 	 */
 	public static void setFeedUpdateInterval() {
-		int feedUpdaterInterval = Integer.parseInt(SkyTubeApp.getPreferenceManager().getString(SkyTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
+		int feedUpdaterInterval = Integer.parseInt(AndTubeApp.getPreferenceManager().getString(AndTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
 		setFeedUpdateInterval(feedUpdaterInterval);
 	}
 

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 import free.rm.skytube.businessobjects.YouTube.Tasks.GetSubscriptionVideosTask;
@@ -38,7 +38,7 @@ public class FeedUpdaterService extends Service implements GetSubscriptionVideos
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		// Need to instantiate the task here since you can only run a task once.
-		int feedUpdaterInterval = Integer.parseInt(SkyTubeApp.getPreferenceManager().getString(SkyTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
+		int feedUpdaterInterval = Integer.parseInt(AndTubeApp.getPreferenceManager().getString(AndTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
 		if(feedUpdaterInterval > 0) {
 			newVideosFetched = new ArrayList<>();
 			getSubscriptionVideosTask = new GetSubscriptionVideosTask(this);
@@ -62,7 +62,7 @@ public class FeedUpdaterService extends Service implements GetSubscriptionVideos
 
 			PendingIntent clickPendingIntent = PendingIntent.getActivity(this, 0, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-			Notification notification = new NotificationCompat.Builder(this, SkyTubeApp.NEW_VIDEOS_NOTIFICATION_CHANNEL)
+			Notification notification = new NotificationCompat.Builder(this, AndTubeApp.NEW_VIDEOS_NOTIFICATION_CHANNEL)
 							.setSmallIcon(R.drawable.ic_notification_icon)
 							.setContentTitle(getString(R.string.app_name))
 							.setContentText(String.format(getString(R.string.notification_new_videos_found), newVideosFetched.size()))
@@ -71,7 +71,7 @@ public class FeedUpdaterService extends Service implements GetSubscriptionVideos
 							.build();
 
 			NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-			notificationManager.notify(SkyTubeApp.NEW_VIDEOS_NOTIFICATION_CHANNEL_ID, notification);
+			notificationManager.notify(AndTubeApp.NEW_VIDEOS_NOTIFICATION_CHANNEL_ID, notification);
 
 			// Send a broadcast that new subscription videos have been found. The feed tab will receive the broadcast and
 			// refresh its video grid to show the new videos.

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.VideoCategory;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.gui.businessobjects.adapters.VideoGridAdapter;
@@ -61,7 +61,7 @@ public class ChannelVideosFragment extends VideosGridFragment {
 
 	@Override
 	public String getFragmentName() {
-		return SkyTubeApp.getStr(R.string.videos);
+		return AndTubeApp.getStr(R.string.videos);
 	}
 
 

@@ -39,7 +39,7 @@ import android.widget.FrameLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubePlaylist;
 import free.rm.skytube.businessobjects.db.DownloadedVideosDb;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityListe
 			updatesCheckerTaskRan = true;
 		}
 
-		SkyTubeApp.setFeedUpdateInterval();
+		AndTubeApp.setFeedUpdateInterval();
 		// Delete any missing downloaded videos
 		new DownloadedVideosDb.RemoveMissingVideosTask().executeInParallel();
 
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityListe
 			@Override
 			public boolean onQueryTextChange(final String newText) {
 				// if the user does not want to have the search string saved, then skip the below...
-				if (SkyTubeApp.getPreferenceManager().getBoolean(getString(R.string.pref_key_disable_search_history), false)
+				if (AndTubeApp.getPreferenceManager().getBoolean(getString(R.string.pref_key_disable_search_history), false)
 						||  newText == null  ||  newText.length() <= 1) {
 					return false;
 				}
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityListe
 				// hide the keyboard
 				searchView.clearFocus();
 
-				if(!SkyTubeApp.getPreferenceManager().getBoolean(SkyTubeApp.getStr(R.string.pref_key_disable_search_history), false)) {
+				if(!AndTubeApp.getPreferenceManager().getBoolean(AndTubeApp.getStr(R.string.pref_key_disable_search_history), false)) {
 					// Save this search string into the Search History Database (for Suggestions)
 					SearchHistoryDb.getSearchHistoryDb().insertSearchText(query);
 				}

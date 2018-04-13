@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.YouTube.GetVideoDescription;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
@@ -46,7 +46,7 @@ public class GetVideoDescriptionTask extends AsyncTaskParallel<Void, Void, Strin
 	@Override
 	protected String doInBackground(Void... params) {
 		GetVideoDescription getVideoDescription = new GetVideoDescription();
-		String description = SkyTubeApp.getStr(R.string.error_get_video_desc);
+		String description = AndTubeApp.getStr(R.string.error_get_video_desc);
 
 		try {
 			getVideoDescription.init(youTubeVideo.getId());

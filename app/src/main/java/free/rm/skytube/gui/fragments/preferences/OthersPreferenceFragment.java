@@ -24,14 +24,11 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
-import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.widget.Toast;
 
-import com.google.android.exoplayer2.C;
-
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.YouTube.ValidateYouTubeAPIKey;
 import free.rm.skytube.businessobjects.db.SearchHistoryDb;
@@ -127,7 +124,7 @@ public class OthersPreferenceFragment extends PreferenceFragment implements Shar
 
 				int interval = Integer.parseInt(feedNotificationPref.getValue());
 
-				SkyTubeApp.setFeedUpdateInterval(interval);
+				AndTubeApp.setFeedUpdateInterval(interval);
 			}*/
 		}
 	}
@@ -146,7 +143,7 @@ public class OthersPreferenceFragment extends PreferenceFragment implements Shar
 				.setPositiveButton(R.string.restart, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						SkyTubeApp.restartApp();
+						AndTubeApp.restartApp();
 					}
 				})
 				.setCancelable(false)

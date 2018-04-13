@@ -32,7 +32,7 @@ import java.io.Serializable;
 
 import free.rm.skytube.gui.activities.PermissionsActivity;
 
-import static free.rm.skytube.app.SkyTubeApp.getContext;
+import static free.rm.skytube.app.AndTubeApp.getContext;
 
 /**
  * Downloads remote files by using Android's {@link DownloadManager}.

@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
@@ -64,7 +64,7 @@ public class GetSubscriptionVideosTask extends AsyncTaskParallel<Void, Void, Voi
 	 * last refresh time is set to -1.
 	 */
 	private DateTime getFeedsLastUpdateTime() {
-		long l = SkyTubeApp.getPreferenceManager().getLong(SkyTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, -1);
+		long l = AndTubeApp.getPreferenceManager().getLong(AndTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, -1);
 		return (l != -1)  ?  new DateTime(l)  :  null;
 	}
 
@@ -84,8 +84,8 @@ public class GetSubscriptionVideosTask extends AsyncTaskParallel<Void, Void, Voi
 	 *                  to indicate that the app needs to force refresh the feeds...
 	 */
 	public static void updateFeedsLastUpdateTime(DateTime dateTime) {
-		SharedPreferences.Editor editor = SkyTubeApp.getPreferenceManager().edit();
-		editor.putLong(SkyTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, dateTime != null  ?  dateTime.getValue()  :  -1);
+		SharedPreferences.Editor editor = AndTubeApp.getPreferenceManager().edit();
+		editor.putLong(AndTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, dateTime != null  ?  dateTime.getValue()  :  -1);
 		editor.commit();
 	}
 

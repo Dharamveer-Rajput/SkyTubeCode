@@ -22,7 +22,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 
 /**
  * A list of {@link StreamMetaData}.
@@ -39,7 +39,7 @@ public class StreamMetaDataList extends ArrayList<StreamMetaData> {
 
 
 	public StreamMetaDataList(int errorMessageId) {
-		this.errorMessage = SkyTubeApp.getStr(errorMessageId);
+		this.errorMessage = AndTubeApp.getStr(errorMessageId);
 	}
 
 
@@ -93,8 +93,8 @@ public class StreamMetaDataList extends ArrayList<StreamMetaData> {
 	 * @return Desired {@link VideoResolution}.
 	 */
 	private VideoResolution getDesiredVideoResolution() {
-		String resIdValue = SkyTubeApp.getPreferenceManager()
-							.getString(SkyTubeApp.getStr(R.string.pref_key_preferred_res),
+		String resIdValue = AndTubeApp.getPreferenceManager()
+							.getString(AndTubeApp.getStr(R.string.pref_key_preferred_res),
 										Integer.toString(VideoResolution.DEFAULT_VIDEO_RES_ID));
 
 		return VideoResolution.videoResIdToVideoResolution(resIdValue);

@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.Logger;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeAPI;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeAPIKey;
@@ -54,7 +54,7 @@ public class GetChannelsDetails {
 	 * @throws IOException
 	 */
 	public List<YouTubeChannel> getYouTubeChannels(List<String> channelIdsList, boolean isUserSubscribed, boolean shouldCheckForNewVideos) throws IOException {
-		String  bannerType = SkyTubeApp.isTablet() ? "bannerTabletHdImageUrl" : "bannerMobileHdImageUrl";
+		String  bannerType = AndTubeApp.isTablet() ? "bannerTabletHdImageUrl" : "bannerMobileHdImageUrl";
 
 		List<YouTubeChannel> youTubeChannelsList = new ArrayList<>();
 
@@ -112,7 +112,7 @@ public class GetChannelsDetails {
 	 */
 	public YouTubeChannel getYouTubeChannelFromUsername(String username) throws IOException {
 
-		String  bannerType = SkyTubeApp.isTablet() ? "bannerTabletHdImageUrl" : "bannerMobileHdImageUrl";
+		String  bannerType = AndTubeApp.isTablet() ? "bannerTabletHdImageUrl" : "bannerMobileHdImageUrl";
 
 		YouTube youtube = YouTubeAPI.create();
 		YouTube.Channels.List channelInfo = youtube.channels().list("snippet, statistics, brandingSettings");

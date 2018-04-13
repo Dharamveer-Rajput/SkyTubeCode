@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.Tasks.GetYouTubeVideosTask;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 
@@ -90,8 +90,8 @@ public abstract class GetYouTubeVideos {
 
 
 	protected String getPreferredRegion() {
-		String region = SkyTubeApp.getPreferenceManager()
-				.getString(SkyTubeApp.getStr(R.string.pref_key_preferred_region), "").trim();
+		String region = AndTubeApp.getPreferenceManager()
+				.getString(AndTubeApp.getStr(R.string.pref_key_preferred_region), "").trim();
 		return (region.isEmpty() ? null : region);
 	}
 

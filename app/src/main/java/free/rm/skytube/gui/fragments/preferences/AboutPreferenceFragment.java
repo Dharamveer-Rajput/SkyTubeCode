@@ -34,7 +34,7 @@ import java.util.Locale;
 
 import free.rm.skytube.BuildConfig;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.gui.businessobjects.updates.UpdatesCheckerTask;
 
 /**
@@ -131,7 +131,7 @@ public class AboutPreferenceFragment extends PreferenceFragment {
 		String timeStamp = "???";
 
 		try {
-			ApplicationInfo appInfo = SkyTubeApp.getContext().getPackageManager().getApplicationInfo(SkyTubeApp.getContext().getPackageName(), 0);
+			ApplicationInfo appInfo = AndTubeApp.getContext().getPackageManager().getApplicationInfo(AndTubeApp.getContext().getPackageName(), 0);
 			String appFile = appInfo.sourceDir;
 			long time = new File(appFile).lastModified();
 

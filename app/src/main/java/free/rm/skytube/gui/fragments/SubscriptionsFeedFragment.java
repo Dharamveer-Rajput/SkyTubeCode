@@ -39,7 +39,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.FeedUpdaterService;
 import free.rm.skytube.businessobjects.VideoCategory;
@@ -96,7 +96,7 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Get
 		super.onCreate(savedInstanceState);
 
 		// Only do an automatic refresh of subscriptions if it's been more than three hours since the last one was done.
-		long l = SkyTubeApp.getPreferenceManager().getLong(SkyTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, -1);
+		long l = AndTubeApp.getPreferenceManager().getLong(AndTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, -1);
 		DateTime subscriptionsLastUpdated = new DateTime(l);
 		DateTime threeHoursAgo = new DateTime().minusHours(REFRESH_TIME);
 		if(subscriptionsLastUpdated.isBefore(threeHoursAgo)) {
@@ -162,21 +162,21 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Get
 
 
 	private static void setFlag(String flag) {
-		SharedPreferences.Editor editor = SkyTubeApp.getPreferenceManager().edit();
+		SharedPreferences.Editor editor = AndTubeApp.getPreferenceManager().edit();
 		editor.putBoolean(flag, true);
 		editor.commit();
 	}
 
 
 	private void unsetFlag(String flag) {
-		SharedPreferences.Editor editor = SkyTubeApp.getPreferenceManager().edit();
+		SharedPreferences.Editor editor = AndTubeApp.getPreferenceManager().edit();
 		editor.putBoolean(flag, false);
 		editor.commit();
 	}
 
 
 	private boolean isFlagSet(String flag) {
-		return SkyTubeApp.getPreferenceManager().getBoolean(flag, false);
+		return AndTubeApp.getPreferenceManager().getBoolean(flag, false);
 	}
 
 
@@ -211,7 +211,7 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Get
 		numVideosFetched += videosFetched.size();
 		numChannelsFetched++;
 		if(progressDialog != null)
-			progressDialog.setContent(String.format(SkyTubeApp.getStr(R.string.fetched_videos_from_channels), numVideosFetched, numChannelsFetched, numChannelsSubscribed));
+			progressDialog.setContent(String.format(AndTubeApp.getStr(R.string.fetched_videos_from_channels), numVideosFetched, numChannelsFetched, numChannelsSubscribed));
 		if(numChannelsFetched == numChannelsSubscribed) {
 			new Handler().postDelayed(new Runnable() {
 				@Override
@@ -259,7 +259,7 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Get
 
 	@Override
 	public String getFragmentName() {
-		return SkyTubeApp.getStr(R.string.feed);
+		return AndTubeApp.getStr(R.string.feed);
 	}
 
 

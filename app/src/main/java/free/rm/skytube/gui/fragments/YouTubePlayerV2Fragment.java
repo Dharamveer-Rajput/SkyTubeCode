@@ -63,7 +63,7 @@ import java.util.List;
 import java.util.Locale;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.Logger;
 import free.rm.skytube.businessobjects.YouTube.GetVideosDetailsByIDs;
@@ -363,8 +363,8 @@ public class YouTubePlayerV2Fragment extends ImmersiveModeFragment {
 	@Override
 	public void onPrepareOptionsMenu(Menu menu) {
 		// Hide the download video option if mobile downloads are not allowed and the device is connected through mobile, and the video isn't already downloaded
-		boolean allowDownloadsOnMobile = SkyTubeApp.getPreferenceManager().getBoolean(SkyTubeApp.getStr(R.string.pref_key_allow_mobile_downloads), false);
-		if((youTubeVideo != null && !youTubeVideo.isDownloaded()) && (SkyTubeApp.isConnectedToWiFi() || (SkyTubeApp.isConnectedToMobile() && allowDownloadsOnMobile))) {
+		boolean allowDownloadsOnMobile = AndTubeApp.getPreferenceManager().getBoolean(AndTubeApp.getStr(R.string.pref_key_allow_mobile_downloads), false);
+		if((youTubeVideo != null && !youTubeVideo.isDownloaded()) && (AndTubeApp.isConnectedToWiFi() || (AndTubeApp.isConnectedToMobile() && allowDownloadsOnMobile))) {
 			menu.findItem(R.id.download_video).setVisible(true);
 		} else {
 			menu.findItem(R.id.download_video).setVisible(false);

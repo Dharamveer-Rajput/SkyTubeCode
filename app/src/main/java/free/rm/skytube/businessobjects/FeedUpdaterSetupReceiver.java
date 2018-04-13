@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.SystemClock;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 
 /**
  * A BroadcastReceiver that will receive a Broadcast when the device boots up. It will check if the user has set the app to
@@ -17,7 +17,7 @@ import free.rm.skytube.app.SkyTubeApp;
 public class FeedUpdaterSetupReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		int feedUpdaterInterval = Integer.parseInt(SkyTubeApp.getPreferenceManager().getString(SkyTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
+		int feedUpdaterInterval = Integer.parseInt(AndTubeApp.getPreferenceManager().getString(AndTubeApp.getStr(R.string.pref_key_feed_notification), "0"));
 
 		Intent i = new Intent(context, FeedUpdaterReceiver.class);
 		PendingIntent intentExecuted = PendingIntent.getBroadcast(context, 0, i,

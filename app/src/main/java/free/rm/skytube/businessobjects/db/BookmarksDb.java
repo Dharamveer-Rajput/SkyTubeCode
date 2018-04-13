@@ -28,7 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 import free.rm.skytube.businessobjects.interfaces.OrderableDatabase;
 
@@ -52,7 +52,7 @@ public class BookmarksDb extends SQLiteOpenHelperEx implements OrderableDatabase
 
 	public static synchronized BookmarksDb getBookmarksDb() {
 		if (bookmarksDb == null) {
-			bookmarksDb = new BookmarksDb(SkyTubeApp.getContext());
+			bookmarksDb = new BookmarksDb(AndTubeApp.getContext());
 		}
 
 		return bookmarksDb;

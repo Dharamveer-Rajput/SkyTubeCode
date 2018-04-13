@@ -5,7 +5,7 @@ import android.os.Handler;
 import java.io.IOException;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.Logger;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
@@ -30,7 +30,7 @@ public class UnsubscribeFromAllChannelsTask extends AsyncTaskParallel<YouTubeCha
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
-						SubsAdapter.get(SkyTubeApp.getContext()).removeChannel(youTubeChannel);
+						SubsAdapter.get(AndTubeApp.getContext()).removeChannel(youTubeChannel);
 					}
 				});
 			}

@@ -3,15 +3,11 @@ package free.rm.skytube.businessobjects.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 
 /**
@@ -31,7 +27,7 @@ public class BlockedChannelsDb extends SQLiteOpenHelperEx {
 
     public static synchronized BlockedChannelsDb getBlockedChannelsDb() {
         if (blockedChannelsDb == null) {
-            blockedChannelsDb = new BlockedChannelsDb(SkyTubeApp.getContext());
+            blockedChannelsDb = new BlockedChannelsDb(AndTubeApp.getContext());
         }
         return blockedChannelsDb;
     }

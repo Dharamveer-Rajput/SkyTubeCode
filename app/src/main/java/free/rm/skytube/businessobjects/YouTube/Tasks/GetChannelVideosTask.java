@@ -33,7 +33,7 @@ import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 import free.rm.skytube.businessobjects.db.SubscriptionsDb;
 
-import static free.rm.skytube.app.SkyTubeApp.getContext;
+import static free.rm.skytube.app.AndTubeApp.getContext;
 
 /**
  * Task to asynchronously get videos for a specific channel.

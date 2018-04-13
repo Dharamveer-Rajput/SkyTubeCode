@@ -22,7 +22,7 @@ import android.os.Build;
 import android.view.View;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.Logger;
 
 /**
@@ -32,7 +32,7 @@ import free.rm.skytube.businessobjects.Logger;
 public class ImmersiveModeFragment extends FragmentEx {
 
 	protected boolean userWantsImmersiveMode() {
-		return ! SkyTubeApp.getPreferenceManager().getBoolean(getString(R.string.pref_key_disable_immersive_mode), false);
+		return ! AndTubeApp.getPreferenceManager().getBoolean(getString(R.string.pref_key_disable_immersive_mode), false);
 	}
 
 

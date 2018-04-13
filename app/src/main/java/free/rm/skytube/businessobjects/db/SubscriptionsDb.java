@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.GetChannelsDetails;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
@@ -55,7 +55,7 @@ public class SubscriptionsDb extends SQLiteOpenHelperEx {
 
 	public static synchronized SubscriptionsDb getSubscriptionsDb() {
 		if (subscriptionsDb == null) {
-			subscriptionsDb = new SubscriptionsDb(SkyTubeApp.getContext());
+			subscriptionsDb = new SubscriptionsDb(AndTubeApp.getContext());
 		}
 
 		return subscriptionsDb;

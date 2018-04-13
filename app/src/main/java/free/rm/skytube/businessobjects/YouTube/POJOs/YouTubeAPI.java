@@ -32,7 +32,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 
 import free.rm.skytube.BuildConfig;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.Logger;
 
 
@@ -53,7 +53,7 @@ public class YouTubeAPI {
 			private String getSha1() {
 				String sha1 = null;
 				try {
-					Signature[] signatures = SkyTubeApp.getContext().getPackageManager().getPackageInfo(BuildConfig.APPLICATION_ID, PackageManager.GET_SIGNATURES).signatures;
+					Signature[] signatures = AndTubeApp.getContext().getPackageManager().getPackageInfo(BuildConfig.APPLICATION_ID, PackageManager.GET_SIGNATURES).signatures;
 					for (Signature signature: signatures) {
 						MessageDigest md = MessageDigest.getInstance("SHA-1");
 

@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.GetCommentThreads;
 import free.rm.skytube.businessobjects.YouTube.Tasks.GetYouTubeChannelInfoTask;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeChannel;
@@ -225,7 +225,7 @@ public class CommentsAdapter extends BaseExpandableListAdapter {
 
 			// change the width dimensions depending on whether the comment is a top level or a child
 			ViewGroup.LayoutParams lp = thumbnailImageView.getLayoutParams();
-			lp.width = (int) SkyTubeApp.getDimension(isTopLevelComment  ?  R.dimen.top_level_comment_thumbnail_width  :  R.dimen.child_comment_thumbnail_width);
+			lp.width = (int) AndTubeApp.getDimension(isTopLevelComment  ?  R.dimen.top_level_comment_thumbnail_width  :  R.dimen.child_comment_thumbnail_width);
 
 			if (isTopLevelComment  &&  getChildrenCount(groupPosition) > 0) {
 				viewRepliesTextView.setVisibility(View.VISIBLE);

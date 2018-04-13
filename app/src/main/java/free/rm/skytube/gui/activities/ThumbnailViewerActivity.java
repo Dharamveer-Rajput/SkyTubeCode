@@ -41,7 +41,7 @@ import free.rm.skytube.R;
 import free.rm.skytube.businessobjects.FileDownloader;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 
-import static free.rm.skytube.app.SkyTubeApp.getContext;
+import static free.rm.skytube.app.AndTubeApp.getContext;
 
 /**
  * An activity that allows the user to view the thumbnail of a YouTube video.

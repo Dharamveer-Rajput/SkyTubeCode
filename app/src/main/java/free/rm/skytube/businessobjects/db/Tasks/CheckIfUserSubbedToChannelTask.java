@@ -22,7 +22,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.db.SubscriptionsDb;
 import free.rm.skytube.gui.businessobjects.SubscribeButton;
 
@@ -65,7 +65,7 @@ public class CheckIfUserSubbedToChannelTask extends AsyncTask<Void, Void, Boolea
 	@Override
 	protected void onPostExecute(Boolean isUserSubbed) {
 		if (isUserSubbed == null) {
-			String err = String.format(SkyTubeApp.getStr(R.string.error_check_if_user_has_subbed), channelId);
+			String err = String.format(AndTubeApp.getStr(R.string.error_check_if_user_has_subbed), channelId);
 			Toast.makeText(subscribeButton.getContext(), err, Toast.LENGTH_LONG).show();
 		} else if (isUserSubbed) {
 			subscribeButton.setUnsubscribeState();

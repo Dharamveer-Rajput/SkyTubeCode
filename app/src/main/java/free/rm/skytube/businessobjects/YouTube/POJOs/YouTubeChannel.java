@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.db.SubscriptionsDb;
 import free.rm.skytube.businessobjects.Logger;
 
@@ -103,11 +103,11 @@ public class YouTubeChannel implements Serializable {
 
 		ChannelBrandingSettings branding = channel.getBrandingSettings();
 		if (branding != null)
-			this.bannerUrl = SkyTubeApp.isTablet() ? branding.getImage().getBannerTabletHdImageUrl() : branding.getImage().getBannerMobileHdImageUrl();
+			this.bannerUrl = AndTubeApp.isTablet() ? branding.getImage().getBannerTabletHdImageUrl() : branding.getImage().getBannerMobileHdImageUrl();
 
 		ChannelStatistics statistics = channel.getStatistics();
 		if (statistics != null) {
-			this.totalSubscribers = String.format(SkyTubeApp.getStr(R.string.total_subscribers),
+			this.totalSubscribers = String.format(AndTubeApp.getStr(R.string.total_subscribers),
 					statistics.getSubscriberCount());
 		}
 	}

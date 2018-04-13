@@ -23,7 +23,7 @@ import android.view.View;
 
 import butterknife.BindView;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.VideoCategory;
 import free.rm.skytube.businessobjects.db.BookmarksDb;
@@ -89,7 +89,7 @@ public class BookmarksFragment extends OrderableVideosGridFragment implements Bo
 
 	@Override
 	public String getFragmentName() {
-		return SkyTubeApp.getStr(R.string.bookmarks);
+		return AndTubeApp.getStr(R.string.bookmarks);
 	}
 	
 

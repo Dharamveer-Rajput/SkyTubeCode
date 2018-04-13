@@ -39,7 +39,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.Logger;
 import free.rm.skytube.businessobjects.YouTube.Tasks.GetSubscriptionVideosTask;
@@ -240,7 +240,7 @@ public class SubscriptionsBackupsManager {
 							.setNeutralButton(R.string.restart, new DialogInterface.OnClickListener() {
 								@Override
 								public void onClick(DialogInterface dialog, int which) {
-									SkyTubeApp.restartApp();
+									AndTubeApp.restartApp();
 								}
 							})
 							.show();
@@ -455,7 +455,7 @@ public class SubscriptionsBackupsManager {
 			dialog.dismiss();
 
 			Toast.makeText(activity,
-							String.format(SkyTubeApp.getStr(R.string.subscriptions_to_channels_imported), totalChannelsSubscribedTo),
+							String.format(AndTubeApp.getStr(R.string.subscriptions_to_channels_imported), totalChannelsSubscribedTo),
 							Toast.LENGTH_SHORT).show();
 
 			// refresh the Feed tab so it shows videos from the newly subscribed channels

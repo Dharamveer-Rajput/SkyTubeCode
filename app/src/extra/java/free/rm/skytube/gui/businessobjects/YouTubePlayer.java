@@ -27,7 +27,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeAPIKey;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 import free.rm.skytube.gui.activities.YouTubePlayerActivity;
@@ -80,9 +80,9 @@ public class YouTubePlayer {
 	 */
 	private static boolean useOfficialYouTubePlayer(Context context) {
 		SharedPreferences   sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		String              str = sharedPref.getString(SkyTubeApp.getStr(R.string.pref_key_choose_player), SkyTubeApp.getStr(R.string.pref_default_player_value));
+		String              str = sharedPref.getString(AndTubeApp.getStr(R.string.pref_key_choose_player), AndTubeApp.getStr(R.string.pref_default_player_value));
 
-		return  (str.equals(SkyTubeApp.getStr(R.string.pref_official_player_value)));
+		return  (str.equals(AndTubeApp.getStr(R.string.pref_official_player_value)));
 	}
 
 

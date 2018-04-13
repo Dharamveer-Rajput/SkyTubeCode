@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.YouTube.POJOs.YouTubeVideo;
 import free.rm.skytube.businessobjects.interfaces.OrderableDatabase;
@@ -32,7 +32,7 @@ public class DownloadedVideosDb extends SQLiteOpenHelperEx implements OrderableD
 
 	public static synchronized DownloadedVideosDb getVideoDownloadsDb() {
 		if (downloadsDb == null) {
-			downloadsDb = new DownloadedVideosDb(SkyTubeApp.getContext());
+			downloadsDb = new DownloadedVideosDb(AndTubeApp.getContext());
 		}
 
 		return downloadsDb;

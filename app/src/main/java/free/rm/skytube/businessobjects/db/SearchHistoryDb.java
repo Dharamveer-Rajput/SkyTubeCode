@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 
 /**
  * A database (DB) that stores user's searches (for use in Search Suggestions).
@@ -26,7 +26,7 @@ public class SearchHistoryDb extends SQLiteOpenHelperEx {
 
 	public static synchronized SearchHistoryDb getSearchHistoryDb() {
 		if (searchHistoryDb == null) {
-			searchHistoryDb = new SearchHistoryDb(SkyTubeApp.getContext());
+			searchHistoryDb = new SearchHistoryDb(AndTubeApp.getContext());
 		}
 
 		return searchHistoryDb;

@@ -24,7 +24,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.gui.businessobjects.BackButtonActivity;
 import free.rm.skytube.gui.businessobjects.fragments.FragmentEx;
 import free.rm.skytube.gui.fragments.YouTubePlayerFragment;
@@ -64,7 +64,7 @@ public class YouTubePlayerActivity extends BackButtonActivity {
 	 */
 	private boolean useDefaultPlayer() {
 		final String defaultPlayerValue = getString(R.string.pref_default_player_value);
-		final String str = SkyTubeApp.getPreferenceManager().getString(getString(R.string.pref_key_choose_player), defaultPlayerValue);
+		final String str = AndTubeApp.getPreferenceManager().getString(getString(R.string.pref_key_choose_player), defaultPlayerValue);
 
 		return str.equals(defaultPlayerValue);
 	}
@@ -75,7 +75,7 @@ public class YouTubePlayerActivity extends BackButtonActivity {
 		super.onStart();
 
 		// set the video player's orientation as what the user wants
-		String  str = SkyTubeApp.getPreferenceManager().getString(getString(R.string.pref_key_screen_orientation), getString(R.string.pref_screen_auto_value));
+		String  str = AndTubeApp.getPreferenceManager().getString(getString(R.string.pref_key_screen_orientation), getString(R.string.pref_screen_auto_value));
 		int     orientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
 
 		if (str.equals(getString(R.string.pref_screen_landscape_value)))

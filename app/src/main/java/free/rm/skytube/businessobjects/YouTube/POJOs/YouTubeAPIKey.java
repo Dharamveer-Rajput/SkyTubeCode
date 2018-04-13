@@ -21,7 +21,7 @@ import java.util.Random;
 
 import free.rm.skytube.BuildConfig;
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 
 /**
  * Represents a YouTube API key.
@@ -94,7 +94,7 @@ public class YouTubeAPIKey {
 	 * @return User's YouTube API key (if set).  If the user did not set a key, then it will return null.
 	 */
 	private String getUserApiKey() {
-		String userApiKey = SkyTubeApp.getPreferenceManager().getString(SkyTubeApp.getStr(R.string.pref_youtube_api_key), null);
+		String userApiKey = AndTubeApp.getPreferenceManager().getString(AndTubeApp.getStr(R.string.pref_youtube_api_key), null);
 
 		if (userApiKey != null) {
 			userApiKey = userApiKey.trim();

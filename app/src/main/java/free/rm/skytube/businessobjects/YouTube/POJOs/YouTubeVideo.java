@@ -46,7 +46,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import free.rm.skytube.R;
-import free.rm.skytube.app.SkyTubeApp;
+import free.rm.skytube.app.AndTubeApp;
 import free.rm.skytube.businessobjects.FileDownloader;
 import free.rm.skytube.businessobjects.Logger;
 import free.rm.skytube.businessobjects.YouTube.Tasks.GetVideoStreamTask;
@@ -57,8 +57,8 @@ import free.rm.skytube.businessobjects.db.DownloadedVideosDb;
 import free.rm.skytube.businessobjects.db.SubscriptionsDb;
 import free.rm.skytube.businessobjects.interfaces.GetDesiredStreamListener;
 
-import static free.rm.skytube.app.SkyTubeApp.getContext;
-import static free.rm.skytube.app.SkyTubeApp.getStr;
+import static free.rm.skytube.app.AndTubeApp.getContext;
+import static free.rm.skytube.app.AndTubeApp.getStr;
 
 /**
  * Represents a YouTube video.
@@ -68,7 +68,7 @@ public class YouTubeVideo implements Serializable {
 	/**
 	 * Default preferred language(s) -- by default, no language shall be filtered out.
 	 */
-	private static final Set<String> defaultPrefLanguages = new HashSet<>(SkyTubeApp.getStringArrayAsList(R.array.languages_iso639_codes));
+	private static final Set<String> defaultPrefLanguages = new HashSet<>(AndTubeApp.getStringArrayAsList(R.array.languages_iso639_codes));
 	/**
 	 * YouTube video ID.
 	 */
@@ -408,7 +408,7 @@ public class YouTubeVideo implements Serializable {
 	 * @return Set of user's preferred ISO 639 language codes (regex).
 	 */
 	private Set<String> getPreferredLanguages() {
-		return SkyTubeApp.getPreferenceManager().getStringSet(getStr(R.string.pref_key_preferred_languages), defaultPrefLanguages);
+		return AndTubeApp.getPreferenceManager().getStringSet(getStr(R.string.pref_key_preferred_languages), defaultPrefLanguages);
 	}
 
 	public void bookmarkVideo(Context context, Menu menu) {
@@ -539,7 +539,7 @@ public class YouTubeVideo implements Serializable {
 
 
 			private int getAllowedNetworkTypesFlags() {
-				boolean allowDownloadsOnMobile = SkyTubeApp.getPreferenceManager().getBoolean(getStr(R.string.pref_key_allow_mobile_downloads), false);
+				boolean allowDownloadsOnMobile = AndTubeApp.getPreferenceManager().getBoolean(getStr(R.string.pref_key_allow_mobile_downloads), false);
 				int flags = DownloadManager.Request.NETWORK_WIFI;
 				if (allowDownloadsOnMobile)
 					flags = flags | DownloadManager.Request.NETWORK_MOBILE;
