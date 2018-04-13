@@ -1,0 +1,23 @@
+<resources>
+	<string name="could_not_get_videos">% S वीडियो नहीं मिल सका।</string>
+	<string name="could_not_get_channel">चैनल जानकारी डाउनलोड नहीं की जा सकी!</string>
+	<string name="views">%,d विचारों</string>
+	<string name="error">त्रुटि</string>
+	<string name="ok">ठीक</string>
+	<string name="search_videos">खोज वीडियो</string>
+	<string name="launch_offical_player_error">लॉन्च करने का प्रयास करते समय कोई त्रुटि हुई
+गूगल से आधिकारिक यूट्यूब प्लेयर सुनिश्चित करें कि यह आपके डिवाइस पर स्थापित है।</string>
+    <string name="LIVE">जीना</string>
+    <string name="featured">विशेष रुप से प्रदर्शित</string>
+    <string name="most_popular">सबसे लोकप्रिय</string>
+    <string name="video">वीडियो</string>
+    <string name="videos">वीडियो</string>
+    <string name="num_videos">%d वीडियो</string>
+    <string name="playlists">प्लेलिस्ट</string>
+    <string name="could_not_get_playlists">% S प्लेलिस्ट प्राप्त नहीं कर सका</string>
+    <string name="hello_blank_fragment">नमस्ते रिक्त टुकड़ा</string>
+    <string name="loading">लोड हो रहा है …</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

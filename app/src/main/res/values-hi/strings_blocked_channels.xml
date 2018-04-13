@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="block_channel">ब्लॉक चैनल</string>
+    <string name="channel_blocked">चैनल को सफलतापूर्वक अवरुद्ध किया गया था कृपया ताज़ा करें</string>
+    <string name="channel_blocked_error">चैनल को अवरुद्ध नहीं किया जा सका</string>
+    <string name="unblock_button">अनब्लॉक</string>
+</resources>

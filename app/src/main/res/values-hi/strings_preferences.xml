@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="preferences">Preferences</string>
+
+	<string name="pref_languages_category">Languages &amp; Regions</string>
+	<string name="pref_title_preferred_regions">Preferred Region</string>
+	<string name="pref_key_preferred_region" translatable="false">pref_key_preferred_region</string>
+	<string name="pref_summary_preferred_regions">Select a preferred region. This is used to filter out videos in the \"Featured\" videos category.</string>
+
+	<string name="pref_title_preferred_languages">Preferred Language(s)</string>
+	<string name="pref_key_preferred_languages" translatable="false">pref_key_preferred_languages</string>
+	<string name="pref_summary_preferred_languages">Experimental: Select one or more preferred languages. This is used to filter out videos in the \"Most Popular\" video category and for video searches.</string>
+
+	<string name="pref_video_player_category">Video Player</string>
+	<string name="pref_title_preferred_res">Preferred Resolution</string>
+	<string name="pref_key_preferred_res" translatable="false">pref_preferred_resolution</string>
+	<string name="pref_summary_preferred_res">अपना पसंदीदा रिज़ॉल्यूशन चुनें:  %s</string>
+
+	<string name="pref_key_choose_player" translatable="false">pref_key_choose_player</string>
+	<string name="pref_title_choose_player">वीडियो प्लेयर</string>
+	<string name="pref_summary_choose_player">उपयोग करने के लिए वीडियो प्लेयर:  %s</string>
+	<string-array name="pref_video_players">
+		<item>डिफ़ॉल्ट प्लेयर</item>
+		<item>लीगेसी प्लेयर (असमर्थित)</item>
+		<item>आधिकारिक YouTube प्लेयर</item>
+	</string-array>
+	<string name="pref_default_player_value" translatable="false">default</string>
+	<string name="pref_legacy_player_value" translatable="false">legacy_v1</string>
+	<string name="pref_official_player_value" translatable="false">official</string>
+	<string-array name="pref_video_players_values" translatable="false">
+		<item>@string/pref_default_player_value</item>
+		<item>@string/pref_legacy_player_value</item>
+		<item>@string/pref_official_player_value</item>   <!-- this should remain the last item -->
+	</string-array>
+
+	<string name="pref_backup_category">बैकअप</string>
+	<string name="pref_title_backup_dbs">बैकअप डेटाबेस</string>
+	<string name="pref_key_backup_dbs" translatable="false">pref_key_backup_db</string>
+	<string name="pref_summary_backup_dbs">अपनी सदस्यता और बुकमार्क डेटाबेस का बैकअप लें.</string>
+	<string name="pref_title_import_dbs">बैकअप आयात करें</string>
+	<string name="pref_key_import_dbs" translatable="false">pref_key_import_db</string>
+	<string name="pref_summary_import_dbs">अपनी सदस्यताएं और बुकमार्क डेटाबेस बैकअप को आयात करें.</string>
+	<string name="databases_backing_up">समर्थन करना…</string>
+	<string name="databases_backup_success">डेटाबेस तक का समर्थन करता है %s</string>
+	<string name="databases_backup_fail">अपने डेटाबेस बैकअप में विफल.</string>
+	<string name="databases_import_select_backup">आयात करने के लिए बैकअप फ़ाइल का चयन करें</string>
+	<string name="databases_import_nothing_selected">कुछ भी नहीं चुना गया था…</string>
+	<string name="databases_import_warning_message">सदस्यता और बुकमार्क डेटाबेस को चयनित बैकअप फ़ाइल में डेटा के साथ प्रतिस्थापित किया जाएगा.\n\जारी रहना?</string>
+	<string name="continue_">जारी रहना</string>
+	<string name="databases_importing">आयात कर रहा है…</string>
+	<string name="databases_import_fail">आपके डेटाबेस आयात करने में विफल</string>
+	<string name="databases_import_success">डेटाबेस आयातित परिवर्तन लागू करने के लिए एप्लिकेशन को पुन: प्रारंभ करें</string>
+
+	<string name="pref_key_import_subs" translatable="false">pref_key_import_subs</string>
+	<string name="pref_title_import_subs">YouTube से सदस्यताएं आयात करें</string>
+	<string name="pref_summary_import_subs">अपने YouTube खाते से अपनी सदस्यता आयात करें.</string>
+	<string name="subs_import_select_backup">आयात करने के लिए यूट्यूब एक्सएमएल फाइल का चयन करें</string>
+
+	<string name="pref_about_category">के बारे में</string>
+	<string name="pref_title_website">वेबसाइट</string>
+	<string name="pref_key_website" translatable="false">pref_website</string>
+	<string name="pref_title_credits">क्रेडिट</string>
+	<string name="pref_key_credits" translatable="false">pref_credits</string>
+	<string name="pref_summary_credits">लोगों और परियोजनाओं ने इस एप्लिकेशन को संभव बनाया</string>
+	<string name="pref_title_version">संस्करण</string>
+	<string name="pref_key_version" translatable="false">pref_version</string>
+	<string name="pref_title_updates">अपडेट</string>
+	<string name="pref_key_updates" translatable="false">pref_updates</string>
+	<string name="pref_summary_updates">नए संस्करणों की जांच करें.</string>
+	<string name="pref_title_license">लाइसेंस</string>
+	<string name="pref_key_license" translatable="false">pref_license</string>
+	<string name="pref_summary_license">जीएनयू जनरल पब्लिक लाइसेंस संस्करण 3</string>
+	<string name="app_license">
+		कॉपीराइट © 2015-2018 रामन मिफसूद\n
+
+		\nयह प्रोग्राम मुफ़्त सॉफ्टवेयर है: आप इसे पुनर्वितरित कर सकते हैं और / या संशोधित कर सकते हैं
+		यह द्वारा प्रकाशित जीएनयू जनरल पब्लिक लाइसेंस की शर्तों के तहत
+		फ्री सॉफ्टवेयर फाउंडेशन (लाइसेंस का संस्करण 3)।\n
+
+		\nयह कार्यक्रम इस आशा में वितरित किया जाता है कि यह उपयोगी होगा,
+		लेकिन बिना किसी वारंटी के; बिना निहित वारंटी के भी
+		िसी विशेष उद्देश्य के लिए अनुरूपता या फिटनेस। देखें
+		अधिक जानकारी के लिए जीएनयू जनरल पब्लिक लाइसेंस.\n
+
+		\nआपको जीएनयू जनरल पब्लिक लाइसेंस की एक प्रति प्राप्त होनी चाहिए
+		इस कार्यक्रम के साथ.  यदि नहीं, तो देखें &lt;http://www.gnu.org/licenses/&gt;
+	</string>
+	<string name="i_agree">मैं सहमत हूँ</string>
+
+
+	<string-array name="languages_names" translatable="false">
+		<item>Afrikaans</item>
+		<item>Azərbaycan</item>
+		<item>Bahasa Indonesia</item>
+		<item>Bahasa Malaysia</item>
+		<item>Català</item>
+		<item>Čeština</item>
+		<item>Dansk</item>
+		<item>Deutsch</item>
+		<item>Eesti</item>
+		<item>English (UK)</item>
+		<item>English (US)</item>
+		<item>Español (España)</item>
+		<item>Español (Latinoamérica)</item>
+		<item>Euskara</item>
+		<item>Filipino</item>
+		<item>Français</item>
+		<item>Français (Canada)</item>
+		<item>Galego</item>
+		<item>Hrvatski</item>
+		<item>IsiZulu</item>
+		<item>Íslenska</item>
+		<item>Italiano</item>
+		<item>Kiswahili</item>
+		<item>Latviešu valoda</item>
+		<item>Lietuvių</item>
+		<item>Magyar</item>
+		<item>Nederlands</item>
+		<item>Norsk bokmål</item>
+		<item>O‘zbek</item>
+		<item>Polski</item>
+		<item>Português</item>
+		<item>Português (Brasil)</item>
+		<item>Română</item>
+		<item>Shqip</item>
+		<item>Slovenčina</item>
+		<item>Slovenščina</item>
+		<item>Suomi</item>
+		<item>Svenska</item>
+		<item>Tiếng Việt</item>
+		<item>Türkçe</item>
+		<item>Български</item>
+		<item>Кыргызча</item>
+		<item>Қазақ Тілі</item>
+		<item>Македонски</item>
+		<item>Монгол</item>
+		<item>Русский</item>
+		<item>Српски</item>
+		<item>Українська</item>
+		<item>Ελληνικά</item>
+		<item>Հայերեն</item>
+		<item>עברית</item>
+		<item>اردو</item>
+		<item>العربية</item>
+		<item>فارسی</item>
+		<item>नेपाली</item>
+		<item>मराठी</item>
+		<item>हिन्दी</item>
+		<item>বাংলা</item>
+		<item>ਪੰਜਾਬੀ</item>
+		<item>ગુજરાતી</item>
+		<item>தமிழ்</item>
+		<item>తెలుగు</item>
+		<item>ಕನ್ನಡ</item>
+		<item>മലയാളം</item>
+		<item>සිංහල</item>
+		<item>ภาษาไทย</item>
+		<item>ລາວ</item>
+		<item>ဗမာ</item>
+		<item>ქართული</item>
+		<item>አማርኛ</item>
+		<item>ខ្មែរ</item>
+		<item>中文 (简体)</item>
+		<item>中文 (繁體)</item>
+		<item>中文 (香港)</item>
+		<item>日本語</item>
+		<item>한국어</item>
+	</string-array>
+
+	<string-array name="languages_iso639_codes" translatable="false">
+		<item>af</item>
+		<item>az</item>
+		<item>id</item>
+		<item>ms</item>
+		<item>ca</item>
+		<item>cs</item>
+		<item>da</item>
+		<item>de</item>
+		<item>et</item>
+		<item>en-GB</item>
+		<item>"en(?:-US)?"</item>	<!-- "en" or "en-US" -->
+		<item>es</item>
+		<item>es-419</item>
+		<item>eu</item>
+		<item>fil</item>
+		<item>fr</item>
+		<item>fr-CA</item>
+		<item>gl</item>
+		<item>hr</item>
+		<item>hi</item>
+		<item>zu</item>
+		<item>is</item>
+		<item>it</item>
+		<item>sw</item>
+		<item>lv</item>
+		<item>lt</item>
+		<item>hu</item>
+		<item>nl</item>
+		<item>no</item>
+		<item>uz</item>
+		<item>pl</item>
+		<item>pt-PT</item>
+		<item>pt</item>
+		<item>ro</item>
+		<item>sq</item>
+		<item>sk</item>
+		<item>sl</item>
+		<item>fi</item>
+		<item>sv</item>
+		<item>vi</item>
+		<item>tr</item>
+		<item>bg</item>
+		<item>ky</item>
+		<item>kk</item>
+		<item>mk</item>
+		<item>mn</item>
+		<item>ru</item>
+		<item>sr</item>
+		<item>uk</item>
+		<item>el</item>
+		<item>hy</item>
+		<item>iw</item>
+		<item>ur</item>
+		<item>ar</item>
+		<item>fa</item>
+		<item>ne</item>
+		<item>mr</item>
+		<item>hi</item>
+		<item>bn</item>
+		<item>pa</item>
+		<item>gu</item>
+		<item>ta</item>
+		<item>te</item>
+		<item>kn</item>
+		<item>ml</item>
+		<item>si</item>
+		<item>th</item>
+		<item>lo</item>
+		<item>my</item>
+		<item>ka</item>
+		<item>am</item>
+		<item>km</item>
+		<item>zh-CN</item>
+		<item>zh-TW</item>
+		<item>zh-HK</item>
+		<item>ja</item>
+		<item>ko</item>
+	</string-array>
+
+
+	<!-- NB for Translators:  Country names shall all be written in English -->
+	<string-array name="country_names" translatable="false">
+		<item>Worldwide (All)</item>
+		<item>Algeria</item>
+		<item>Argentina</item>
+		<item>Australia</item>
+		<item>Austria</item>
+		<item>Azerbaijan</item>
+		<item>Bahrain</item>
+		<item>Belarus</item>
+		<item>Belgium</item>
+		<item>Bosnia and Herzegovina</item>
+		<item>Brazil</item>
+		<item>Bulgaria</item>
+		<item>Canada</item>
+		<item>Chile</item>
+		<item>Colombia</item>
+		<item>Croatia</item>
+		<item>Czech Republic</item>
+		<item>Denmark</item>
+		<item>Egypt</item>
+		<item>Estonia</item>
+		<item>Finland</item>
+		<item>France</item>
+		<item>Georgia</item>
+		<item>Germany</item>
+		<item>Ghana</item>
+		<item>Greece</item>
+		<item>Hong Kong</item>
+		<item>Hungary</item>
+		<item>Iceland</item>
+		<item>India</item>
+		<item>Indonesia</item>
+		<item>Iraq</item>
+		<item>Ireland</item>
+		<item>Israel</item>
+		<item>Italy</item>
+		<item>Japan</item>
+		<item>Jordan</item>
+		<item>Kazakhstan</item>
+		<item>Kenya</item>
+		<item>Kuwait</item>
+		<item>Latvia</item>
+		<item>Lebanon</item>
+		<item>Libya</item>
+		<item>Lithuania</item>
+		<item>Luxembourg</item>
+		<item>Macedonia</item>
+		<item>Malaysia</item>
+		<item>Mexico</item>
+		<item>Montenegro</item>
+		<item>Morocco</item>
+		<item>Nepal</item>
+		<item>Netherlands</item>
+		<item>New Zealand</item>
+		<item>Nigeria</item>
+		<item>Norway</item>
+		<item>Oman</item>
+		<item>Pakistan</item>
+		<item>Peru</item>
+		<item>Philippines</item>
+		<item>Poland</item>
+		<item>Portugal</item>
+		<item>Puerto Rico</item>
+		<item>Qatar</item>
+		<item>Romania</item>
+		<item>Russia</item>
+		<item>Saudi Arabia</item>
+		<item>Senegal</item>
+		<item>Serbia</item>
+		<item>Singapore</item>
+		<item>Slovakia</item>
+		<item>Slovenia</item>
+		<item>South Africa</item>
+		<item>South Korea</item>
+		<item>Spain</item>
+		<item>Sri Lanka</item>
+		<item>Sweden</item>
+		<item>Switzerland</item>
+		<item>Taiwan</item>
+		<item>Tanzania</item>
+		<item>Thailand</item>
+		<item>Tunisia</item>
+		<item>Turkey</item>
+		<item>Uganda</item>
+		<item>Ukraine</item>
+		<item>United Arab Emirates</item>
+		<item>United Kingdom</item>
+		<item>Vietnam</item>
+		<item>Yemen</item>
+		<item>Zimbabwe</item>
+	</string-array>
+
+	<string-array name="country_codes" translatable="false">
+		<item></item>
+		<item>DZ</item>
+		<item>AR</item>
+		<item>AU</item>
+		<item>AT</item>
+		<item>AZ</item>
+		<item>BH</item>
+		<item>BY</item>
+		<item>BE</item>
+		<item>BA</item>
+		<item>BR</item>
+		<item>BG</item>
+		<item>CA</item>
+		<item>CL</item>
+		<item>CO</item>
+		<item>HR</item>
+		<item>CZ</item>
+		<item>DK</item>
+		<item>EG</item>
+		<item>EE</item>
+		<item>FI</item>
+		<item>FR</item>
+		<item>GE</item>
+		<item>DE</item>
+		<item>GH</item>
+		<item>GR</item>
+		<item>HK</item>
+		<item>HU</item>
+		<item>IS</item>
+		<item>IN</item>
+		<item>ID</item>
+		<item>IQ</item>
+		<item>IE</item>
+		<item>IL</item>
+		<item>IT</item>
+		<item>JP</item>
+		<item>JO</item>
+		<item>KZ</item>
+		<item>KE</item>
+		<item>KW</item>
+		<item>LV</item>
+		<item>LB</item>
+		<item>LY</item>
+		<item>LT</item>
+		<item>LU</item>
+		<item>MK</item>
+		<item>MY</item>
+		<item>MX</item>
+		<item>ME</item>
+		<item>MA</item>
+		<item>NP</item>
+		<item>NL</item>
+		<item>NZ</item>
+		<item>NG</item>
+		<item>NO</item>
+		<item>OM</item>
+		<item>PK</item>
+		<item>PE</item>
+		<item>PH</item>
+		<item>PL</item>
+		<item>PT</item>
+		<item>PR</item>
+		<item>QA</item>
+		<item>RO</item>
+		<item>RU</item>
+		<item>SA</item>
+		<item>SN</item>
+		<item>RS</item>
+		<item>SG</item>
+		<item>SK</item>
+		<item>SI</item>
+		<item>ZA</item>
+		<item>KR</item>
+		<item>ES</item>
+		<item>LK</item>
+		<item>SE</item>
+		<item>CH</item>
+		<item>TW</item>
+		<item>TZ</item>
+		<item>TH</item>
+		<item>TN</item>
+		<item>TR</item>
+		<item>UG</item>
+		<item>UA</item>
+		<item>AE</item>
+		<item>GB</item>
+		<item>VN</item>
+		<item>YE</item>
+		<item>ZW</item>
+	</string-array>
+
+	<string name="pref_other_category">अन्य लोग</string>
+	<string name="pref_key_default_tab" translatable="false">pref_default_tab</string>
+	<string name="pref_title_default_tab">डिफ़ॉल्ट टैब</string>
+	<string name="pref_summary_default_tab">AndTube लांच होने पर दिखाने के लिए डिफ़ॉल्ट टैब: %s</string>
+	<string-array name="default_tab" translatable="false">
+		<item>@string/featured</item>
+		<item>@string/most_popular</item>
+		<item>@string/feed</item>
+		<item>@string/bookmarks</item>
+		<item>@string/downloads</item>
+	</string-array>
+	<string-array name="default_tab_values" translatable="false">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+
+	<string name="pref_key_feed_notification" translatable="false">pref_key_feed_notification</string>
+	<string name="pref_title_feed_notification">फ़ीड ऑटो नोटिफिकेशन</string>
+	<string name="pref_summary_feed_notification">सदस्यता वाले चैनल से नए वीडियो की जांच कितनी बार करें: %s</string>
+	<string-array name="feed_notification">
+		<item>बंद</item>
+		<item>6 घंटे</item>
+		<item>12 घंटे</item>
+		<item>24 घंटे</item>
+	</string-array>
+	<!-- Notification values are in milliseconds -->
+	<string-array name="feed_notification_values" translatable="false">
+		<item>0</item>
+		<item>21600000</item> <!-- 6 hours -->
+		<item>43200000</item> <!-- 12 hours -->
+		<item>86400000</item> <!-- 24 hours -->
+	</string-array>
+
+	<string name="pref_key_screen_orientation" translatable="false">pref_key_screen_orientation</string>
+	<string name="pref_title_screen_orientation">स्क्रीन दिशानिर्देश</string>
+	<string name="pref_summary_screen_orientation">वीडियो प्लेयर का अभिविन्यास:  %s</string>
+	<string-array name="screen_orientations">
+		<item>स्वचालित</item>
+		<item>परिदृश्य</item>
+		<item>चित्र</item>
+		<item>डिवाइस संवेदक</item>
+	</string-array>
+	<string name="pref_screen_auto_value" translatable="false">auto</string>
+	<string name="pref_screen_landscape_value" translatable="false">landscape</string>
+	<string name="pref_screen_portrait_value" translatable="false">portrait</string>
+	<string name="pref_screen_sensor_value" translatable="false">sensor</string>
+	<string-array name="screen_orientations_values" translatable="false">
+		<item>@string/pref_screen_auto_value</item>
+		<item>@string/pref_screen_landscape_value</item>
+		<item>@string/pref_screen_portrait_value</item>
+		<item>@string/pref_screen_sensor_value</item>
+	</string-array>
+
+	<string name="pref_key_disable_immersive_mode" translatable="false">pref_key_disable_immersive_mode</string>
+	<string name="pref_title_disable_immersive_mode">इमर्सिव मोड अक्षम करें</string>
+	<string name="pref_summary_disable_immersive_mode">टिप्पणियां और वीडियो विवरण आइकन और नेविगेशन बार हमेशा प्रदर्शित किया जाएगा</string>
+
+	<string name="pref_youtube_api_key" translatable="false">pref_youtube_api_key</string>
+	<string name="pref_title_youtube_api_key">यूट्यूब एपीआई कुंजी</string>
+	<string name="pref_summary_youtube_api_key">अपनी खुद की यूट्यूब डेटा एपीआई कुंजी दर्ज करें डिफ़ॉल्ट एक का उपयोग करने के लिए खाली छोड़ दें</string>
+	<string name="pref_youtube_api_key_error">आपके द्वारा दर्ज एपीआई कुंजी को मान्य करने के प्रयास में एक त्रुटि हुई।</string>
+	<string name="pref_youtube_api_key_custom">कुंजी मान्य है नई यूट्यूब एपीआई कुंजी का उपयोग करने के लिए ऐप पुनः आरंभ करें</string>
+	<string name="pref_youtube_api_key_default">डिफ़ॉल्ट यूट्यूब एपीआई कुंजी पर वापस स्विच करने के लिए ऐप पुनः आरंभ करें</string>
+
+	<string name="pref_key_allow_mobile_downloads" translatable="false">pref_allow_mobile_downloads_key</string>
+	<string name="pref_title_allow_mobile_downloads">मोबाइल नेटवर्क पर डाउनलोड की अनुमति दें</string>
+	<string name="pref_summary_allow_mobile_downloads">मोबाइल नेटवर्क पर वीडियो डाउनलोड करने के लिए इसे चुनें। अन्यथा, वीडियो केवल वाई-फाई पर डाउनलोड किए जा सकते हैं</string>
+
+	<string name="pref_key_disable_search_history" translatable="false">pref_disable_search_history</string>
+	<string name="pref_title_disable_search_history">खोज इतिहास अक्षम करें</string>
+	<string name="pref_summary_disable_search_history">यदि चेक किया जाता है, तो खोज इतिहास साफ़ कर दिया जाएगा और उसका उपयोग नहीं किया जाएगा।</string>
+	<string name="pref_disable_search_history_deleted">खोज इतिहास हटाया गया</string>
+	<string name="restart">Restart</string>
+	<string name="pref_key_subscriptions_alphabetical_order" translatable="false">pref_key_subscriptions_alphabetical_order</string>
+	<string name="pref_title_subscriptions_alphabetical_order">वर्णानुक्रम से चैनलों को सॉर्ट करें</string>
+	<string name="pref_summary_subscriptions_alphabetical_order">यदि चेक किया गया है, तो सदस्यता लें चैनलों को वर्णानुक्रम में क्रमबद्ध किया जाएगा।</string>
+	<string name="pref_key_brightness_level" translatable="false">pref_key_brightness_level</string>
+
+	<string name="pref_blocked_channel_category">अवरुद्ध चैनल</string>
+	<string name="pref_key_blocked_channels_list" translatable="false">pref_blocked_channels_list_key</string>
+	<string name="pref_title_blocked_channels_list">अवरुद्ध चैनल</string>
+	<string name="pref_summary_blocked_channels_list">उन चैनलों की जांच करें जिन्हें आप अनब्लॉक करना चाहते हैं और दूसरों को अनचेक छोड़ दें</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="bookmarks">बुकमार्क</string>
+
+	<string name="bookmark">बुकमार्क</string>
+	<string name="video_bookmarked">वीडियो बुकमार्क</string>
+	<string name="video_bookmarked_error">वीडियो को बुकमार्क नहीं किया जा सका</string>
+
+	<string name="unbookmark">Unbookmark</string>
+	<string name="video_unbookmarked">वीडियो बिना खुल गया</string>
+	<string name="video_unbookmarked_error">वीडियो को अऩॉकमार्क नहीं किया जा सका</string>
+
+	<string name="no_bookmarked_videos_text">आपने अभी तक किसी भी वीडियो को बुकमार्क नहीं किया है। \ N \ n एक बार आप ऐसा करते हैं, वे यहां दिखाई देंगे।</string>
+</resources>

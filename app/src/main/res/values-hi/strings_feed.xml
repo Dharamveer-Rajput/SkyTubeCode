@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="feed">फ़ीड</string>
+
+	<string name="subscribing_to_channels">चैनलों की सदस्यता लें…</string>
+	<string name="fetching_subbed_channels_info">चैनल \' सूचना प्राप्त करना…</string>
+	<string name="fetching_subbed_channels_info_error">चैनल \' जानकारी प्राप्त करते समय कोई त्रुटि हुई</string>
+
+	<string name="fetching_subscription_videos">सब्सक्राइब किए गए चैनलों से वीडियो लाएं</string>
+	<string name="fetched_videos_from_channels">% 2 $ d /% 3 $ d चैनल से% 1 $ d वीडियो प्राप्त किए गए</string>
+	<string name="no_new_videos_found">कोई नया वीडियो नहीं मिला.</string>
+	<string name="no_subscriptions_text">आपको किसी भी चैनल की सदस्यता नहीं है। \ N \ n एक बार जब आप एक बार हो, तो पिछले महीने के भीतर आपके सदस्यता वाले चैनलों पर अपलोड किए गए सभी वीडियो यहां दिखाई देंगे।</string>
+	<string name="import_subscriptions_from_youtube">YouTube से सदस्यताएं आयात करें</string>
+
+	<string name="notification_channel_feed_title">फ़ीड सूचनाएं</string>
+	<string name="notification_new_videos_found">%d सदस्यता वाले चैनल से नया वीडियो</string>
+</resources>
